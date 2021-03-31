@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <fieldset class="m-1">
+                <legend class=" border-dark border-bottom h1 p-2"> Write <i class="fas fa-keyboard"></i> </legend>
+                <form method="POST">
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    {{form.media}}
+                    <a href="{% url 'index' %}" class="btn btn-lg btn-danger" >Go back</a>
+                    <button class="btn btn-lg btn-success">Save</button>   
+                </form>
+            </fieldset>
+        </div>
+    </div>    
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <hr>
+                <small class="text-muted" >you can save this article to help other people or just click perview and copy it then go back</small>
+                <hr>
+            </div>
+        </div>
+    
+</div>
+
+{% endblock %}

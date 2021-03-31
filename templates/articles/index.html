@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+   <div class="row">
+        <div class="col-lg-12">
+            <div class="jumbotron jumbotron-fluid border border-dark" style="background-color: #85bcf7;">
+              <div class="container">
+                <h1 class="display-4">Welcome to Articles hub</h1>
+                <p class="lead">Whan you find the best service</p>
+              </div>      
+            </div>
+        </div>
+    </div>
+    {% if user.username %}
+    {% else %}
+        <div class="row m-1">
+          <div class="col-lg-12 bg-dark p-4">
+            <h2 class="text-light text-center"> <i class="fas fa-pencil-alt"></i> Join us</h2>
+            <p class="text-light text-center h6">And create your profissional article now</p>
+            <div class="text-center p-2">
+              <a href="{% url 'signin' %}" class="btn btn-primary btn-lg">Signin</a>
+              <a href="{% url 'login' %}" class="btn btn-success btn-lg">Login</a>
+            </div>
+          </div>
+        </div>
+    {% endif %}
+
+    <div class="row">
+      <div class="col-lg-12 offset-3">
+        <img src="{% static 'img/banner2.jpg' %}" alt="banner" width="500">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item h2"><i class="fas fa-info-circle"></i> How to use</li>
+          <li class="list-group-item">Sign in <i class="fas fa-user"></i></li>
+          <li class="list-group-item">Login <i class="fas fa-sign-in-alt"></i></li>
+          <li class="list-group-item">Go to the writing page <small class="text-muted">(save your article or copy it)</small> <i class="fas fa-pencil-alt"></i></li>
+          <li class="list-group-item">Finaly you can search for another articles <i class="fas fa-book-reader"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row m-1">
+      <div class="col-lg-12 bg-dark p-4">
+        <h2 class="text-light text-center"><i class="fas fa-search"></i>  Search for article</h2>
+        <p class="text-light text-center h6">Enter the title you want</p>
+        <div class="p-2">
+          <form class="form-inline mr-5" action="{% url 'all' %}">
+            <input class="form-control mr-sm-2 offset-3 w-50" type="search" placeholder="Search by title" aria-label="Search" name="searchname">
+            <button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+</div>
+  
+
+     
+
+
+{% endblock %}

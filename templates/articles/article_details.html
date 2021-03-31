@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+<div class="container">  
+    <div class="row">
+        <div class="col-lg-8 border border-dark m-1 p-3 ">
+            <h2>{{article.title}}</h2>
+            <hr>
+            <p>{{article.content|safe}}</p>
+        </div>
+        <div class="col-lg-3">  
+            <ul class="list-group  border-dark m-1">
+                <li class="list-group-item active bg-dark txt-light border-dark h2">About</li>
+                <li class="list-group-item"> <label>Creator :<span class="text-muted">{{article.owner}}</span></label></li>
+                <li class="list-group-item"><label>Date :<span class="text-muted">{{article.date}}</span></label></li>
+                <li class="list-group-item"><label><label>Views :<span class="text-muted">{{article.views}}</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

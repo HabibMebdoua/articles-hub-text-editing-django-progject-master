@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+<div class="container"> 
+    <div class="row">
+        <div class="col-lg-12 bg-dark p-4 ">
+            <h2 class="text-light text-center h1"> Blogs </h2>
+        </div>
+    </div> 
+    {% for blog in blog %}
+    <div class="row mt-2">
+        <div class="col-lg-8 border border-dark p-2  mb-2" style="overflow: auto;">
+            <a href="" class="h5">{{blog.title}}</a><span class="text-muted">  crated by</span><span class="h5">  Admin</span>
+            <hr>
+            <p>{{blog.subject|truncatewords:20|safe}}</p>
+            <a href="{% url 'blog_details' blog.id %}" class="btn btn-lg btn-primary mt-2" style="float: right;"> See details <i class="fas fa-arrow-circle-right"></i></a>
+            <small class="text-muted offset-4"> <i class="far fa-eye"></i> {{blog.views}} persons read this article</small>
+        </div>
+    </div>
+    {% empty %}
+    <h1 class="text-center p-5 m-5">0 ruselts :(</h1>
+    {% endfor %}   
+</div>
+
+{% endblock %}

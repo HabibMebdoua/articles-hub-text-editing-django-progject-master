@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <meta name="Introdaction" content="This is a Simple Web Site From me To test HTML5">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+
+</head>
+
+<body>
+
+{% include 'partials/_navbar.html' %}
+
+<!-- massage  -->
+{% if messages %} 
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="alert alert-success">
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div> 
+        </div>
+    </div>
+</div>       
+{% endif %}
+<!-- end -->
+
+
+{% block content %}
+
+
+{% endblock %}
+
+
+
+
+<script rel="script" src="{% static 'js/all.min.js' %}"></script>
+<script rel="script" src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+<script rel="script" src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+
+{% include 'partials/_footer.html' %}
+
+</html>

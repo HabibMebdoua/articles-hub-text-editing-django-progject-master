@@ -1,0 +1,79 @@
+/* home*/
+#txt-ar{resize: none;}
+label{padding-bottom: 5px;}
+#create-fr{background-color: #e3f2fd;
+    border-radius: 8px; 
+    padding: 25px;
+    padding-bottom: 50px;
+    border: 1px solid #337ab7;}
+
+
+.tr{color: brown;}
+
+/* home*/
+
+h4{
+   font-size: 30px;
+   margin-top:50px;
+   
+   display: inline-block;
+   font-family: "mv boli"
+   
+}
+.titel{
+    color: #337ab7;
+    font-family:"mv boli";
+    font-size: 25px;
+    
+}
+
+.dec{
+    float:none;
+    font-size: 20px;
+    font-family:"mv boli";
+    
+}
+
+#fl {    
+    padding: 10px;
+    margin-bottom: 10px; 
+    margin-top: -60;
+    float: right;   
+}
+
+#fl-login{
+    padding: 15px;
+    background-color: white;
+    float:right;
+    margin-top: 130px;
+    margin-bottom: 100px;
+}
+
+#fl-login, #fl{
+    box-shadow: 1px 2px rgb(209, 237, 255);
+    border-radius:10px ;    
+ }
+
+#h2{
+    font-family: "mv boli" ;
+    font-size: 40px;
+    color: #337ab7;
+    text-shadow: 1px 1px black;
+    padding-top: 150px; 
+}
+#p-login{
+    color: black;
+    font-size: 17px;
+    text-align: right;
+    font-family:"mv boli";
+    
+}
+
+#bg-comment{
+    background-color: #e3f2fd;
+}
+
+
+
+
+#btn{float: right;}

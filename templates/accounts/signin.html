@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <fieldset class="border border-dark rounded p-3">
+                <legend>Signin</legend>
+                <form method="POST">
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    <button class="btn btn-lg btn-success btn-block" > Done </button>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
